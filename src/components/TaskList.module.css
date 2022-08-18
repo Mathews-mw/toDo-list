@@ -1,0 +1,135 @@
+/* <------------------> Estilo referente ao checkbox <------------------> */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: var(--gray-500);
+    border-radius: 2px;
+    outline: 1px solid var(--blue-dark);
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+    background-color: var(--gray-400);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+    background-color: var(--purple-dark);
+    outline: none;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* <--------------------------------------------------------------------> */
+
+.card  {
+    display: flex;
+    width: 46rem;
+    padding: 1rem;
+
+    background-color: var(--gray-500);
+    border-radius: 8px;
+}
+
+.card + .card {
+    margin-top: 1rem;
+}
+
+.content {
+   
+    width: 39.5rem;
+    height: auto;
+    margin-right: 1.3125rem; 
+}
+
+.content p {
+    font-size: 0.875rem;
+    line-height: 140%;
+    text-align: justify;
+}
+
+
+.trashIcon {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.trashIcon button {
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.trashIcon button:hover {
+    color: var(--danger);
+}
+
+.puplishedDate {
+    display: flex;
+    width: 5rem;
+    justify-content: end;
+    align-items: center;
+}
+
+time {
+    font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 25rem;
+    }
+}

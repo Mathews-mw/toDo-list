@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+
+    width: 46rem;
+
+    margin-bottom: 1.5rem;   
+}
+
+.headerContent div {
+    display: flex;
+}
+
+.headerContent div h4 {
+    margin-right: .5rem;
+}
+
+.blueText {
+    color: var(--blue)
+}
+
+.purpleText {
+    color: var(--purple)
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    width: 46rem;
+    
+    justify-content: center;
+    align-items: center;
+
+    padding: 4rem 1.5rem;
+
+    border-top: 1px solid var(--gray-400);
+}
+
+.empty img {
+    margin-bottom: 1rem;
+}
+
+.empty p {
+    line-height: 1.5;
+    color: var(--gray-300)
+}
+
+main {
+    height: 28.125rem;
+    overflow: auto;
+}
+
+main::-webkit-scrollbar {
+    width: 4px;
+    opacity: 0.5;
+}
+
+main::-webkit-scrollbar-track {
+    background: none;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: var(--purple-dark);
+    border-radius: 12px;
+    
+
+}
+
+@media (max-width: 768px) {
+    .headerContent {
+        width: 25rem;
+    }
+
+    .empty {
+        width: 28rem;
+    }
+
+    main::-webkit-scrollbar {
+        width: 2px;
+        opacity: 0.5;
+    }
+}

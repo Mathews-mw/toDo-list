@@ -1,0 +1,37 @@
+footer {
+    display: flex;
+    justify-content: center;
+    height: 7.45rem;
+
+    margin-top: 1rem;
+    background-color: var(--gray-700); 
+    border-top: 1px solid var(--purple-dark);
+    
+}
+
+.container {
+    display: flex;
+    width: 46rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.625rem 1.625rem 1.625rem;
+
+    
+}
+
+.container img {
+    height: auto;
+    width: 5rem;
+}
+
+.textFooter p {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+}
+
+@media (max-width: 768px) {
+    footer {
+        height: 9.6rem;
+    }
+}
